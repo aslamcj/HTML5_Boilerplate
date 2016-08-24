@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>The HTML5 Boilerplate</title>
+		<meta name="description" content="HTML5 Boilerplate template">
+		<meta name="author" content="Aslam">
+		<link rel="stylesheet" href="css/styles.css?v=1.0">
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			input {
+				background-position: 0% 50%;
+				background-repeat: no-repeat;
+				padding-left: 15px;
+			}
+			input:required {
+				background-image: url('images/required.png');
+			}
+			input:focus:invalid {
+				background-image: url('images/invalid.png');
+			}
+			input:focus:valid {
+				background-image: url('images/valid.png');
+			}
+			:invalid { 
+				box-shadow: none; 
+			}
+			input:required, input[required] {
+				background-image: url('images/required.png');
+			}
+			input:disabled {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="register" method="post">
+			<header>
+				<h1>Sign Me Up!</h1>
+				<p>I would like to receive your fine publication.</p>
+			</header>
+			<ul>
+				<li>
+					<label for="register-name">My name is:</label>
+					<input type="text" id="register-name" name="name" required aria-required="true" placeholder="First Name">
+				</li>
+				<li>
+					<label for="address">My email address is:</label>
+					<input type="text" id="address" name="address"  required aria-required="true">
+				</li>
+				<li>
+					<label for="url">My website is located at:</label>
+					<input type="text" id="url" name="url">
+				</li>
+				<li>
+					<label for="password">I would like my password to be:</label>
+					<p>(at least 6 characters, no spaces)</p>
+					<input type="password" id="password" name="password"  required aria-required="true" title="(at least 6 characters, no spaces)" pattern="\S{6,}">
+				</li>
+				<li>
+					<label for="rating">On a scale of 1 to 10, my knowledge of HTML5 is:</label>
+					<input type="text" name="rating" id="rating">
+				</li>
+				<li>
+					<label for="startdate">Please start my subscription on: </label>
+					<input type="text" id="startdate" name="startdate" autocomplete="off">
+				</li>
+				<li>
+					<label for="quantity">I would like to receive 
+					<input type="text" name="quantity" id="quantity" disabled> copies of <cite>The HTML5 Herald</cite>.</label>
+				</li>
+				<li>
+					<label for="upsell">Also sign me up for <cite>The CSS3 Chronicle</cite></label>
+					<input type="checkbox" id="upsell" name="upsell" value="CSSChronicle">
+				</li>
+				<li>
+					<label for="about">Article Title</label>
+					<input type="text" name="about" id="about" readonly value="http://www.thehtml5herald.com/register.html">
+				</li>
+				<li>
+					<label for="favcolor">Favorite Color</label>
+					<input type="color" list="colors" id="favcolor" name="favcolor">
+					<datalist id="colors">
+						<option value="#0000FF" label="blue">
+						<option value="#008000" label="green">
+						<option value="#ff0000" label="red">
+						<option value="#663399" label="RebeccaPurple">
+					</datalist>
+				</li>
+				<li>
+					<input type="submit" id="register-submit" value="Send Post Haste">
+				</li>
+			</ul>
+		</form>
+		<form id="search" method="get">
+			<label for="s">Search</label>
+			<input type="search" id="s" name="s">
+			<input type="submit" value="Search">
+		</form>
+
+		<form id="newelements" method="get">
+			<ul>
+
+				<li>
+					<label for="email">My email address is</label>
+					<input type="email" id="email" name="email">
+				</li>
+
+				<li>
+					<label for="url">My website is located at:</label>
+					<input type="url" id="url" name="url">
+				</li>
+
+				<li>
+					<label for="quantity">I would like to receive <input type="number" min="1" name="quantity" id="quantity"> copies of <cite>The HTML5 Herald</cite></label>
+				</li>
+
+				<li>
+					<label for="rating">On a scale of 1 to 10, my knowledge of HTML5 is:</label>
+					<input name="rating" type="range" min="1" max="10" step="1">
+				</li>
+
+				<li>
+					<label for="clr">Color: </label>
+					<input id="clr" name="clr" type="color" placeholder="#ffffff" pattern="#(?:[0-9A-Fa-f]{6})">
+				</li>
+				<li>
+					<label for="startdate">Please start my subscription on:</label>
+					<input type="date" min="1904-03-17" max="1904-05-17" id="startdate" name="startdate" required aria-required="true" placeholder="1904-03-17">
+				</li>
+			</ul>
+			<input type="submit" value="Submit">
+		</form>
+
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
